@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml"
+>
+<body>
+<th:block th:fragment="header">
+    <script th:inline="javascript"> var contextRoot = /*[[@{/}]]*/ ''; </script>
+    <!-- Navigation Bar-->
+	   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+		  <a class="navbar-brand" href="/returns/viewreturns">
+		    <img src="images/homePageLogo.jpg" width="110" height="35" class="d-inline-block align-top" alt="">
+		    <h4>BackTraq</h4>
+		  </a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		    <div class="navbar-nav">
+		      <a class="nav-item nav-link" href="/returns/viewreturns"><b>Returns</b> <span class="sr-only">(current)</span></a>
+		      <a class="nav-item nav-link" href="/returns/createreturn"><b>Create Return</b></a>
+		      <a class="nav-item nav-link" href="#"><b>Administrative</b></a>
+		      <a class="nav-item nav-link" href="#"><b>My Profile</b></a>
+		      <a class="nav-item nav-link" th:href="@{/logout}"><b>Logout</b></a>
+		    </div>
+		  </div>
+		</nav>
+    <!-- End Navigation Bar-->
+
+</th:block>
+</body>
+</html>
