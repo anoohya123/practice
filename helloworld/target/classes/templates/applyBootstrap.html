@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Add Bootstrap to Thymeleaf</title>
+   <!--  Latest compiled and minified CSS
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+    <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <table class="table table-responsive table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Employee First Name</th>
+                <th>Employee Last Name</th>
+                <th>Employee Email</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--<tr th:each="employee : ${employees}">
+                <td th:text="${employee.firstName}"></td>
+                <td th:text="${employee.lastName}"></td>
+                <td th:text="${employee.email}"></td>
+            </tr>-->
+            <tr>
+            <td >Anoohya</td>
+            <td >Adapala</td>
+            <td >anoohya.a@gmail.com</td>
+            </tr>
+            <tr>
+                <td >Ransh</td>
+                <td >Kumar</td>
+                <td >ransh.k@gmail.com</td>
+            </tr>
+            <tr>
+                <td >Suneela</td>
+                <td >Adapala</td>
+                <td >suneela.a@gmail.com</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

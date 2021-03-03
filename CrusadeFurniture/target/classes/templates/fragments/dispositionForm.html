@@ -1,0 +1,69 @@
+<div th:fragment="formField(returnStatuses, recoveryDispositions, itemConditions, assetReturnConditions)" class="container" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div>
+
+        <form id="dispositionUpdateForm">
+
+            <div class="form-row">
+
+                <div class="form-group col">
+                    <label >Return Status</label>
+                    <select class="form-control" name="returnStatus" id="returnStatus">
+                        <option></option>
+                        <option th:each="status : ${returnStatuses}" th:value="${status.key}" th:text="${status.value}"
+                                ></option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label >Recovery Disposition Date</label>
+                    <input type="text" class="form-control" name="recoveryDispositionDate" disabled="true"/>
+                </div>
+                <div class="form-group col">
+                    <label >Recovery Disposition</label>
+                    <select class="form-control" name="recoveryDisposition" id="recoveryDisposition">
+                        <option></option>
+                        <option th:each="disposition : ${recoveryDispositions}" th:value="${disposition.key}" th:text="${disposition.value}"
+                                ></option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label >Asset Return Complete</label>
+                    <select class="form-control" name="assetReturnComplete" id="assetReturnComplete">
+                        <option></option>
+                        <option value="Y" >Y</option>
+                        <option value="N" >N</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group col">
+                    <label >Item Condition</label>
+                    <select class="form-control" name="itemCondition" id="itemCondition">
+                        <option></option>
+                        <option th:each="condition : ${itemConditions}" th:value="${condition.key}" th:text="${condition.value}"
+                                ></option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label >Item Complete</label>
+                    <select class="form-control" name="itemComplete" id="itemComplete">
+                        <option></option>
+                        <option value="Y" >Y</option>
+                        <option value="N" >N</option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                    <label >Asset Return Condition</label>
+                    <select class="form-control" name="assetReturnCondition" id="assetReturnCondition">
+                        <option></option>
+                        <option th:each="condition : ${assetReturnConditions}" th:value="${condition.key}" th:text="${condition.value}"
+                               ></option>
+                    </select>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
