@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class WelcomeController {
 
-    @RequestMapping(value="/welcome", method = RequestMethod.POST)
+    @RequestMapping(value="/welcome", method = RequestMethod.GET)
     public String welcomePage(Model model){
         model.addAttribute("welcometext","Welcome to Cruasde Furniture");
         return "welcome";
     }
-    @RequestMapping(value="/welcome", method = RequestMethod.GET)
+    @RequestMapping(value="/home", method = RequestMethod.GET)
     public String welcomeForm(Model model){
         return "form";
     }

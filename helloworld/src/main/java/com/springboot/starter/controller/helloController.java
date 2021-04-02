@@ -1,4 +1,4 @@
-package com.springboot.starter;
+package com.springboot.starter.controller;
 
 
 import org.springframework.stereotype.Controller;

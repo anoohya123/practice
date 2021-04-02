@@ -1,0 +1,9 @@
+com\springboot\starter\controller\helloController.class
+com\springboot\starter\serviceImpl\UserServiceImpl.class
+com\springboot\starter\entity$UserModel.class
+com\springboot\starter\form\LoginForm.class
+com\springboot\starter\service\UserService.class
+com\springboot\starter\helloWEBApplication.class
+com\springboot\starter\repository\UserRepository.class
+com\springboot\starter\controller\LoginController.class
+com\springboot\starter\entity.class

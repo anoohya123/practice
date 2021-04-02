@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ThymeLeaf Hello world</title>
+</head>
+<body>
+      <h1> WELCOME TO FURNITURE WORLD</h1>
+
+
+        <h4>login to explore</h4>
+
+<form th:action="@{/home}" th:method="post" th:object="${loginForm}">
+    Name : <input name="Name" type="text" th:feild="*{Name}"/> <br>
+    email : <input name="email" type="email" th:feild="*{email}"/> <br>
+    mobile : <input name="mobile" type="number" th:feild="*{mobile}"/> <br>
+   <!-- DoB  : <input name="DoB" type="date" th:feild="*{DoB}"/> <br>-->
+    password : <input name="password" type="password" th:feild="*{password}"/> <br>
+    gender : <input name="gender" type="text" th:feild="*{gender}"/> <br>
+    <button name="Login" type="submit">Login</button>
+</form>
+</body>
+</html>
